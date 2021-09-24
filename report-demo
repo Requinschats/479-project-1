@@ -1,0 +1,14 @@
+------------------------------ REPORT -------------------------------------------------------
+There are three modules:
+
+root: main.py where each step of the pipeline in factored in a function. Everything is called in the main().
+
+output: output files returned from each of the five blocks in the pipeline for the first five documents in the
+collection
+
+reuters: source documents as mentioned in the assignment (the collection)
+
+------------------------------ DEMO -------------------------------------------------------
+To run: main.py -> main().
+Strengths: modularity, easy to read functional programming
+Weaknesses: performance -> contrary to streaming, modularity forces iterating over each files multiple times
