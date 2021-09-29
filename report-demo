@@ -1,14 +1,23 @@
 ------------------------------ REPORT -------------------------------------------------------
 There are three modules:
 
-root: main.py where each step of the pipeline in factored in a function. Everything is called in the main().
+root: main.py where you can find each step of the pipeline in factored in a function. Everything is called in the main().
+      ** Pipeline happy path tests are in main.test.py
 
 output: output files returned from each of the five blocks in the pipeline for the first five documents in the
-collection
+collection. Result of each step is in the corresponding directory.
 
 reuters: source documents as mentioned in the assignment (the collection)
 
 ------------------------------ DEMO -------------------------------------------------------
-To run: main.py -> main().
-Strengths: modularity, easy to read functional programming
-Weaknesses: performance -> contrary to streaming, modularity forces iterating over each files multiple times
+To run the pipeline: main.py -> main().
+    1. For each file in the reuters directory, a step of the pipeline is applied. Then, the result is printed in the corresponding directory of the output directory.
+    2. Output of the previous step is fed to the next one.
+    3. Go back to step 1.
+
+To test pipeline happy path: run main.py.test
+
+Output: in output directory under each step directory
+
+Strengths: modularity, easy to read functional programming.
+Weaknesses: performance -> contrary to streaming, modularity forces iterating over each files multiple times. For example, by removing the modularity of the pipeline, we could apply stemming and lowercase at the same time instead.
