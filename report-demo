@@ -19,5 +19,5 @@ To test pipeline happy path: run main.py.test
 
 Output: in output directory under each step directory
 
-Strengths: modularity, easy to read functional programming.
+Strengths: modularity, easy to read functional programming. Naming. Intuitive demo.
 Weaknesses: performance -> contrary to streaming, modularity forces iterating over each files multiple times. For example, by removing the modularity of the pipeline, we could apply stemming and lowercase at the same time instead.
